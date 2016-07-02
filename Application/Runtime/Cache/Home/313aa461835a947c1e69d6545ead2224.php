@@ -1,0 +1,137 @@
+<?php if (!defined('THINK_PATH')) exit();?><div class="bjui-pageContent">
+    <form action="<?php echo U('ajaxDone1');?>" class="pageForm" data-toggle="validate">
+        
+        <table class="table table-condensed table-hover">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">姓名：</label>
+                        <input type="text" name="name" id="j_dialog_name" value="" data-rule="required" size="20">
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">年龄：</label>
+                        <input type="text" name="ages" id="j_dialog_tel" value="" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_operation" class="control-label x90">性别：</label>
+                        <select name="sex" id="j_dialog_operation" data-toggle="selectpicker">
+                            <?php $sex = C('sex');?>
+                            <?php if(is_array($sex)): foreach($sex as $k=>$v): ?><option value="<?php echo ($k); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="j_dialog_code" class="control-label x85">关注商品：</label>
+                      <select name="zhongdian" id="j_dialog_operation" data-toggle="selectpicker">
+                            <?php $zhongdian = C('zhongdian');?>
+                            <?php if(is_array($zhongdian)): foreach($zhongdian as $k=>$v): ?><option value="<?php echo ($k); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
+                        </select>
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">联系方式：</label>
+                        <input type="text" name="tel" id="j_dialog_name" value="" data-rule="required" size="20">
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">身份证：</label>
+                        <input type="text" name="shenfenzheng" id="j_dialog_tel" value=""  size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">意向面积：</label>
+                        <select name="mianji" id="j_dialog_operation" data-toggle="selectpicker">
+                            <?php $mianji = C('mianji');?>
+                            <?php if(is_array($mianji)): foreach($mianji as $k=>$v): ?><option value="<?php echo ($k); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
+                        </select>
+                        
+                    </td>
+                   
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">职业顾问：</label>
+                        <input type="text" name="zhiye" id="j_dialog_tel" value=""  size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">途径姓名：</label>
+                        <input type="text" name="yewu" id="j_dialog_name" value=""  size="20">
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">途径联系人电话：</label>
+                        <input type="text" name="yewu_tel" id="j_dialog_tel" value=""  size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">客户类型：</label>
+                        <input type="text" name="kehuleixing" id="j_dialog_name" value="" size="20">
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">职业：</label>
+                        <input type="text" name="zhiye1" id="j_dialog_tel" value=""  size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">工作区域/单位：</label>
+
+                      <select name="danwei" id="j_dialog_operation" data-toggle="selectpicker">
+                            <?php $danwei = C('city');?>
+                            <?php if(is_array($danwei)): foreach($danwei as $k=>$v): ?><option value="<?php echo ($k); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
+                        </select>
+                        
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">居住区域/居住项目：</label>
+                         <select name="juzhu" id="j_dialog_operation" data-toggle="selectpicker">
+                            <?php $juzhu = C('city');?>
+                            <?php if(is_array($juzhu)): foreach($juzhu as $k=>$v): ?><option value="<?php echo ($k); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
+                         </select>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">现住面积：</label>
+                        <input type="text" name="mianji2" id="j_dialog_name" value="" data-rule="required" size="20">m<sup>2</sup>
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">意向房源：</label>
+                        <input type="text" name="yixiang" id="j_dialog_tel" value="" data-rule="required" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="j_dialog_name" class="control-label x90">预算：</label>
+                        <input type="text" name="yushuan" id="j_dialog_name" value="" data-rule="required" size="20">
+                    </td>
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">购买用途：</label>
+                        <input type="text" name="yongtu" id="j_dialog_tel" value=""  size="20">
+                    </td>
+                </tr>
+                <tr>         
+                    <td>
+                        <label for="j_dialog_tel" class="control-label x85">未成交原因：</label>
+                        <input type="text" name="yuanyin" id="j_dialog_tel" value="" data-rule="required" size="20">
+                    </td>
+
+                    <td>
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-close">关闭</button></li>
+        <li><button type="submit" class="btn-default">保存</button></li>
+    </ul>
+</div>
